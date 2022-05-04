@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.title {
+    text-align: center;
+    font-size: 35px;
+    margin: 40px 0;
+}
+
+.area__txt   {
+    display: block;
+    width: 700px;
+    height: 200px;
+    margin: 10px auto 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #C4C4C4;
+    width: 700px;
+    margin: 0 auto 25px;
+    resize: none;
+    background-color: transparent;
+}
+
+.keyboard {
+    border: 1px solid slategray;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+}
+
+.line:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.key {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 1px solid slategray;
+    border-radius: 4px;
+    margin: 3px;
+    padding: 4px;
+    text-align: center;
+    line-height: 32px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.side__btn {
+    background-color: #2d3f3d;
+}
+
+.game__btn {
+    background-color: red;
+}
+
+.key__active {
+    background-color: chartreuse;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.key:hover {
+    background-color: chartreuse;
+}
+
+.key:active {
+    background-color: chartreuse;
+    border-radius: 20px;
+}
+
+.backspace {
+    width: 124px;
+}
+
+.tab {
+    width: 75px;
+}
+
+.delete {
+    width: 43px;
+}
+
+.capslock {
+    width: 80px;
+}
+
+.capslock__active {
+    background-color: chartreuse;
+    border-radius: 7px;
+}
+
+
+.enter {
+    width: 130px;
+}
+
+.lshift {
+    width: 100px;
+}
+
+.rshift {
+    width: 110px;
+}
+
+.space {
+    width: 300px;
+}
+
+.windows__img {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.lctrl {
+    width: 70px;
+}
+
+.rctrl {
+    width: 64px;
+}
+
+.description {
+    margin: 40px;
+    text-align: center;
+}
