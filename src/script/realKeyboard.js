@@ -30,11 +30,13 @@ const realKeyboard = () => {
   });
 
   document.addEventListener('keyup', (event) => {
+    textArea.blur();
     keysBtn.forEach(key => {
       if (key.dataset.name == event.code) {
         key.classList.remove('key__active');
       }
     })
+
   });
 };
 

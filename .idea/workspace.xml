@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="init: start task virtual-keyboard" />
+    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="feat: add eslint and made structure of project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/realKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/realKeyboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/renderKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/renderKeyboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/virtualKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/virtualKeyboard.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +45,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651681199909</updated>
-      <workItem from="1651681201538" duration="1021000" />
+      <workItem from="1651681201538" duration="1313000" />
+      <workItem from="1651683716474" duration="9809000" />
     </task>
     <task id="LOCAL-00001" summary="init: start task virtual-keyboard">
       <created>1651681765084</created>
@@ -49,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651681765085</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add eslint and made structure of project">
+      <created>1651682597013</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651682597013</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: start task virtual-keyboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="init: start task virtual-keyboard" />
+    <MESSAGE value="feat: add eslint and made structure of project" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add eslint and made structure of project" />
   </component>
 </project>

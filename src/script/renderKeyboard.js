@@ -69,7 +69,7 @@ const renderKeyboard = () => {
         + '            <div class="key lctrl side__btn" data-name="ControlLeft">Ctrl</div>\n'
         + '            <div class="key side__btn" data-name="MetaLeft"><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M12 16L3 16 3 23.75 12 24.988zM12 5L3 6.25 3 14 12 14zM14 4.75L14 14 27 14 27 3zM14 16L14 25.25 27 27 27 16z"/></svg></div>\n'
         + '            <div class="key side__btn" data-name="AltLeft">Alt</div>\n'
-        + '            <div class="key space" data-name="Space"></div>\n'
+        + '            <div class="key space" data-name="Space"> </div>\n'
         + '            <div class="key side__btn" data-name="AltRight">Alt</div>\n'
         + '            <div class="key side__btn" data-name="ArrowLeft">&#9668;</div>\n'
         + '            <div class="key side__btn" data-name="ArrowDown">&#9660;</div>\n'
