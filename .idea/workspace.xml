@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="feat: add eslint and made structure of project">
+    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="feat: add function to move into textarea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/realKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/realKeyboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/renderKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/renderKeyboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/virtualKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/virtualKeyboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +27,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../igorbadyukov-JSFEPRESCHOOL/portfolio" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1651681199909</updated>
       <workItem from="1651681201538" duration="1313000" />
-      <workItem from="1651683716474" duration="9809000" />
+      <workItem from="1651683716474" duration="11798000" />
+      <workItem from="1651739791271" duration="4255000" />
     </task>
     <task id="LOCAL-00001" summary="init: start task virtual-keyboard">
       <created>1651681765084</created>
@@ -62,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651682597013</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add function to move into textarea">
+      <created>1651704397255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651704397255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +90,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: start task virtual-keyboard" />
     <MESSAGE value="feat: add eslint and made structure of project" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add eslint and made structure of project" />
+    <MESSAGE value="feat: add function to move into textarea" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add function to move into textarea" />
   </component>
 </project>

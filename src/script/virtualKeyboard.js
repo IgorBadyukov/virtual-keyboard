@@ -1,8 +1,11 @@
 const virtualKeyboard = () => {
+    let caseSize = 'down';
     const keysBtn = document.querySelectorAll('.key');
+    const symbols = document.querySelectorAll('.symbol');
     const textArea = document.querySelector('.area__txt');
 
     function deleteWord(str, pos) {
+        console.log('dqwdqw')
         return str.slice(0, pos) + str.slice(pos + 1, str.length);
     }
 
@@ -16,7 +19,8 @@ const virtualKeyboard = () => {
                         break;
                     case 'Backspace':
                         textArea.focus();
-                        textArea.value = textArea.value.slice(0, -1);
+                        textArea.value = deleteWord(textArea.value, textArea.selectionStart - 1);
+                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd - 1;
                         break;
                     case 'Enter':
                         textArea.focus();
@@ -24,8 +28,8 @@ const virtualKeyboard = () => {
                         break;
                     case 'Delete':
                         textArea.focus();
-                        deleteWord(textArea.value, textArea.selectionStart);
-                        break;
+                        textArea.value = deleteWord(textArea.value, textArea.selectionStart);
+                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd - 1;                        break;
                     case 'ArrowLeft':
                         textArea.focus();
                         textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd - 1;
@@ -42,6 +46,20 @@ const virtualKeyboard = () => {
                         textArea.focus();
                         textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd + 77;
                         break;
+                    case 'CapsLock':
+                        getLocalStorageSize();
+                        key.classList.toggle('capslock__active');
+                        symbols.forEach((item) => {
+                            if (caseSize === 'down') {
+                                item.innerHTML = item.innerHTML.toUpperCase();
+                            }
+                            else {
+                                item.innerHTML = item.innerHTML.toLowerCase();
+                            }
+                        });
+                        caseSize = caseSize === 'down' ? 'up' : 'down';
+                        setLocalStorageSize();
+                        break;
                 }
             }
             else {
@@ -54,6 +72,23 @@ const virtualKeyboard = () => {
         textArea.focus();
         textArea.value = textArea.value + key.innerHTML;
     }
+
+    function setLocalStorageSize() {
+        localStorage.setItem('size', caseSize);
+    }
+
+    function getLocalStorageSize() {
+        if (localStorage.getItem('size')) {
+            caseSize = localStorage.getItem('size');
+        }
+        else {
+            caseSize = 'down';
+        }
+    }
+
+    window.addEventListener('load', () => {
+        localStorage.setItem('size', 'down');
+    });
 }
 
 export default virtualKeyboard;
