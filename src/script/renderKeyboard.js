@@ -77,7 +77,8 @@ const renderKeyboard = () => {
         + '            <div class="key rctrl side__btn" data-name="ControlRight">Ctrl</div>\n'
         + '        </div>\n'
         + '    </div>\n'
-        + '    <p class="description">Клавиатура выполнена в ОС Windows</p>';
+        + '    <p class="description">Клавиатура выполнена в ОС Windows</p>'
+        + '    <p class="description__change__language">Смена языка производится с помощью клавиш Shift + Alt (можно использовать левые и правые клавиши Shift, Alt)</p>';
 };
 
 export default renderKeyboard;

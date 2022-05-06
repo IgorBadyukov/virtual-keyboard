@@ -1,5 +1,6 @@
 const realKeyboard = () => {
   let lang = 'en';
+  let flag = false;
   let caseSize = 'down';
   const symbols = document.querySelectorAll('.symbol');
   const textArea = document.querySelector('.area__txt');
@@ -15,6 +16,7 @@ const realKeyboard = () => {
         }
       }
     }
+    flag = true;
   }
 
   function shiftDown() {
@@ -25,6 +27,7 @@ const realKeyboard = () => {
         }
       }
     }
+    flag = false;
   }
 
   document.addEventListener('keydown', (event) => {
@@ -36,7 +39,36 @@ const realKeyboard = () => {
             capsLockClick(key);
             break;
           case 'ShiftLeft':
+            if (flag) {
+              lang = lang == 'en' ? 'ru' : 'en';
+              changeLanguage();
+            }
             shiftUp();
+            break;
+          case 'ShiftRight':
+            if (flag) {
+              lang = lang == 'en' ? 'ru' : 'en';
+              changeLanguage();
+            }
+            shiftUp();
+            break;
+          case 'AltLeft':
+            if (flag) {
+              lang = lang == 'en' ? 'ru' : 'en';
+              changeLanguage();
+            }
+            else {
+              flag = true;
+            }
+            break;
+          case 'AltRight':
+            if (flag) {
+              lang = lang == 'en' ? 'ru' : 'en';
+              changeLanguage();
+            }
+            else {
+              flag = true;
+            }
             break;
         }
         key.classList.add('key__active');
@@ -51,6 +83,15 @@ const realKeyboard = () => {
         switch (key.dataset.name) {
           case 'ShiftLeft':
             shiftDown();
+            break;
+          case 'ShiftRight':
+            shiftDown();
+            break;
+          case 'AltLeft':
+            flag = false
+            break;
+          case 'AltRight':
+            flag = false;
             break;
         }
         key.classList.remove('key__active');
@@ -73,9 +114,25 @@ const realKeyboard = () => {
     setLocalStorageSize();
   }
 
+  function changeLanguage() {
+    for (let key of symbols) {
+      for (let item of symbolsArray) {
+        if (key.dataset.name === item.code) {
+          key.innerHTML = lang === 'en' ? item["enInner"] : item["ruInner"];
+        }
+      }
+    }
+    flag = false;
+  }
+
   function setLocalStorageSize() {
     localStorage.setItem('size', caseSize);
   }
+
+  function setLocalStorageLang() {
+    localStorage.setItem('lang', lang);
+  }
+  window.addEventListener('beforeunload', setLocalStorageLang);
 
   function getLocalStorageSize() {
     if (localStorage.getItem('size')) {
@@ -86,21 +143,31 @@ const realKeyboard = () => {
     }
   }
 
+  function getLocalStorageLang() {
+    if (localStorage.getItem('lang')) {
+      lang = localStorage.getItem('lang');
+    }
+    else {
+      lang = 'en';
+    }
+    changeLanguage();
+  }
+  window.addEventListener('load', () => {
+    localStorage.setItem('size', 'down');
+    getSymbols();
+  });
+
+  const moveSymbolSArray = (symbols) => {
+    symbolsArray = [...symbols];
+    getLocalStorageLang();
+  };
+
   async function getSymbols() {
     const url = '../src/assets/db/symbols.json';
     const res = await fetch(url);
     const data = await res.json();
     moveSymbolSArray(data);
   }
-
-  const moveSymbolSArray = (symbols) => {
-    symbolsArray = [...symbols];
-  };
-
-  window.addEventListener('load', () => {
-    localStorage.setItem('size', 'down');
-    getSymbols();
-  });
 };
 
 export default realKeyboard;
