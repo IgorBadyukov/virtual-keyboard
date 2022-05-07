@@ -13,11 +13,16 @@ const virtualKeyboard = () => {
         return str.slice(0, pos) + str.slice(pos + 1, str.length);
     }
 
+    function addWord(str, posStart, posEnd, symbol) {
+        return str.slice(0, posStart) + symbol + str.slice(posEnd, str.length);
+    }
+
     function shiftUp() {
         for (let key of symbols) {
             for (let item of symbolsArray) {
                 if (key.dataset.name === item.code) {
                     key.innerHTML = lang === 'en' ? item["enInnerShift"] : item["ruInnerShift"];
+                    key.innerHTML = caseSize === 'down' ? key.innerHTML.toUpperCase() : key.innerHTML.toLowerCase();
                 }
             }
         }
@@ -28,6 +33,7 @@ const virtualKeyboard = () => {
             for (let item of symbolsArray) {
                 if (key.dataset.name === item.code) {
                     key.innerHTML = lang === 'en' ? item["enInner"] : item["ruInner"];
+                    key.innerHTML = caseSize === 'up' ? key.innerHTML.toUpperCase() : key.innerHTML.toLowerCase();
                 }
             }
         }
@@ -39,42 +45,80 @@ const virtualKeyboard = () => {
     shiftRight.addEventListener('mouseup', shiftDown);
 
     keysBtn.forEach(key => {
-        key.addEventListener('click', () => {
+
+        key.addEventListener('click', (event) => {
+            event.preventDefault();
+            let curStart = textArea.selectionStart, curEnd = textArea.selectionEnd;
             if (key.classList.contains('side__btn')) {
                 switch (key.dataset.name) {
                     case 'Tab':
-                        textArea.focus();
-                        textArea.value = textArea.value + '\t';
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '\t');
+                        textArea.selectionStart = textArea.selectionEnd = curStart + 1;
                         break;
                     case 'Backspace':
                         textArea.focus();
-                        textArea.value = deleteWord(textArea.value, textArea.selectionStart - 1);
-                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd;
-                        break;
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        if (curStart === curEnd) {
+                            textArea.value = deleteWord(textArea.value, textArea.selectionStart - 1);
+                            textArea.selectionStart = textArea.selectionEnd = curStart - 1;
+                            break;
+                        }
+                        else {
+                            textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '');
+                            textArea.selectionStart = textArea.selectionEnd = curStart;
+                            break;
+                        }
                     case 'Enter':
                         textArea.focus();
-                        textArea.value = textArea.value + '\n';
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '\n');
+                        textArea.selectionStart = textArea.selectionEnd = curStart;
                         break;
                     case 'Delete':
                         textArea.focus();
-                        textArea.value = deleteWord(textArea.value, textArea.selectionStart);
-                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd - 1;
-                        break;
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        if (curStart === curEnd) {
+                            textArea.value = deleteWord(textArea.value, textArea.selectionStart);
+                            textArea.selectionStart = textArea.selectionEnd = curStart;
+                            break;
+                        }
+                        else {
+                            textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '');
+                            textArea.selectionStart = textArea.selectionEnd = curStart;
+                            break;
+                        }
                     case 'ArrowLeft':
                         textArea.focus();
-                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd - 1;
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '◄');
+                        textArea.selectionStart = textArea.selectionEnd = curStart + 1;
                         break;
                     case 'ArrowRight':
                         textArea.focus();
-                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd + 1;
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '►');
+                        textArea.selectionStart = textArea.selectionEnd = curStart + 1;
                         break;
                     case 'ArrowUp':
                         textArea.focus();
-                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd - 77;
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '▲');
+                        textArea.selectionStart = textArea.selectionEnd = curStart + 1;
                         break;
                     case 'ArrowDown':
                         textArea.focus();
-                        textArea.selectionStart = textArea.selectionEnd = textArea.selectionEnd + 77;
+                        curStart = textArea.selectionStart;
+                        curEnd = textArea.selectionEnd;
+                        textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '▼');
+                        textArea.selectionStart = textArea.selectionEnd = curStart + 1;
                         break;
                     case 'CapsLock':
                         getLocalStorageSize();
@@ -92,14 +136,17 @@ const virtualKeyboard = () => {
                 }
             }
             else {
-                clickBtn(key);
+                clickBtn(key, curStart, curEnd);
             }
         });
     });
 
-    function clickBtn (key) {
+    function clickBtn (key, posStart, posEnd) {
         textArea.focus();
-        textArea.value = textArea.value + key.innerHTML;
+        // let curStart = textArea.selectionStart;
+        // let curEnd = textArea.selectionEnd;
+        textArea.value = addWord(textArea.value, posStart, posEnd, key.innerHTML);
+        textArea.selectionStart = textArea.selectionEnd = posStart + 1;
     }
 
     function setLocalStorageSize() {
