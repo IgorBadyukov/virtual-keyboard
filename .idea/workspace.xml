@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="feat: add all functional for task">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="fix: fix rules in eslint and fix error and warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/realKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/realKeyboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/virtualKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/virtualKeyboard.js" afterDir="false" />
     </list>
@@ -63,7 +60,7 @@
       <workItem from="1651683716474" duration="11798000" />
       <workItem from="1651739791271" duration="25609000" />
       <workItem from="1651844047666" duration="8418000" />
-      <workItem from="1651935315297" duration="25797000" />
+      <workItem from="1651935315297" duration="28864000" />
     </task>
     <task id="LOCAL-00001" summary="init: start task virtual-keyboard">
       <created>1651681765084</created>
@@ -114,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651951643019</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix: fix rules in eslint and fix error and warnings">
+      <created>1652017477829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652017477829</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +143,7 @@
     <MESSAGE value="feat: add functional to button LeftShift and RightShift" />
     <MESSAGE value="feat: add functional to change language" />
     <MESSAGE value="feat: add all functional for task" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add all functional for task" />
+    <MESSAGE value="fix: fix rules in eslint and fix error and warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix rules in eslint and fix error and warnings" />
   </component>
 </project>

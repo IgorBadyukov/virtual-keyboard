@@ -9,6 +9,10 @@ const realKeyboard = () => {
 
   let symbolsArray = [];
 
+  function deleteWord(str, pos) {
+    return str.slice(0, pos) + str.slice(pos + 1, str.length);
+  }
+
   function addWord(str, posStart, posEnd, symbol) {
     return str.slice(0, posStart) + symbol + str.slice(posEnd, str.length);
   }
@@ -100,12 +104,12 @@ const realKeyboard = () => {
   document.addEventListener('keydown', (event) => {
     textArea.focus();
     keysBtn.forEach((key) => {
+      event.preventDefault();
       if (key.dataset.name === event.code) {
         let curStart; let
           curEnd;
         switch (key.dataset.name) {
           case 'Tab':
-            event.preventDefault();
             textArea.focus();
             curStart = textArea.selectionStart;
             curEnd = textArea.selectionEnd;
@@ -116,6 +120,14 @@ const realKeyboard = () => {
           case 'CapsLock':
             textArea.focus();
             capsLockClick(key);
+            break;
+          case 'Space':
+            textArea.focus();
+            curStart = textArea.selectionStart;
+            curEnd = textArea.selectionEnd;
+            textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, ' ');
+            textArea.selectionStart = curStart + 1;
+            textArea.selectionEnd = curStart + 1;
             break;
           case 'ShiftLeft':
             textArea.focus();
@@ -145,9 +157,35 @@ const realKeyboard = () => {
             break;
           case 'Delete':
             textArea.focus();
+            curStart = textArea.selectionStart;
+            curEnd = textArea.selectionEnd;
+            if (curStart === curEnd) {
+              textArea.value = deleteWord(textArea.value, textArea.selectionStart);
+              textArea.selectionStart = curStart;
+              textArea.selectionEnd = curStart;
+              break;
+            } else {
+              textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '');
+              textArea.selectionStart = curStart;
+              textArea.selectionEnd = curStart;
+              break;
+            }
             break;
           case 'Backspace':
             textArea.focus();
+            curStart = textArea.selectionStart;
+            curEnd = textArea.selectionEnd;
+            if (curStart === curEnd) {
+              textArea.value = deleteWord(textArea.value, textArea.selectionStart - 1);
+              textArea.selectionStart = curStart - 1;
+              textArea.selectionEnd = curStart - 1;
+              break;
+            } else {
+              textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '');
+              textArea.selectionStart = curStart;
+              textArea.selectionEnd = curStart;
+              break;
+            }
             break;
           case 'AltRight':
             textArea.focus();
@@ -160,7 +198,6 @@ const realKeyboard = () => {
             break;
           case 'ArrowLeft':
             textArea.focus();
-            event.preventDefault();
             curStart = textArea.selectionStart;
             curEnd = textArea.selectionEnd;
             textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '◄');
@@ -169,7 +206,6 @@ const realKeyboard = () => {
             break;
           case 'ArrowRight':
             textArea.focus();
-            event.preventDefault();
             curStart = textArea.selectionStart;
             curEnd = textArea.selectionEnd;
             textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '►');
@@ -178,7 +214,6 @@ const realKeyboard = () => {
             break;
           case 'ArrowUp':
             textArea.focus();
-            event.preventDefault();
             curStart = textArea.selectionStart;
             curEnd = textArea.selectionEnd;
             textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '▲');
@@ -187,7 +222,6 @@ const realKeyboard = () => {
             break;
           case 'ArrowDown':
             textArea.focus();
-            event.preventDefault();
             curStart = textArea.selectionStart;
             curEnd = textArea.selectionEnd;
             textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '▼');
@@ -198,7 +232,6 @@ const realKeyboard = () => {
             break;
         }
         if (key.classList.contains('symbol')) {
-          event.preventDefault();
           textArea.focus();
           curStart = textArea.selectionStart;
           curEnd = textArea.selectionEnd;
@@ -237,8 +270,8 @@ const realKeyboard = () => {
     });
   });
 
-  const moveSymbolSArray = () => {
-    symbolsArray = [...symbols];
+  const moveSymbolSArray = (data) => {
+    symbolsArray = [...data];
     getLocalStorageLang();
   };
 

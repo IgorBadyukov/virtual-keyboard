@@ -71,6 +71,7 @@ const virtualKeyboard = () => {
       if (key.classList.contains('side__btn')) {
         switch (key.dataset.name) {
           case 'Tab':
+            textArea.focus();
             curStart = textArea.selectionStart;
             curEnd = textArea.selectionEnd;
             textArea.value = addWord(textArea.value, textArea.selectionStart, textArea.selectionEnd, '\t');
@@ -169,8 +170,8 @@ const virtualKeyboard = () => {
     });
   });
 
-  function moveSymbolSArray() {
-    symbolsArray = [...symbols];
+  function moveSymbolSArray(data) {
+    symbolsArray = [...data];
   }
 
   async function getSymbols() {
