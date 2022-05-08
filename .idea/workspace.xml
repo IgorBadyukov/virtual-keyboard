@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="fix: fix rules in eslint and fix error and warnings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/realKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/realKeyboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/virtualKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/virtualKeyboard.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28hua28Z01f4Jsz5QhkGl2L4PZg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Pet-project/wildberris" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\rsschool\virtual-keyboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\rsschool\virtual-keyboard\src\assets" />
+      <recent name="E:\rsschool\virtual-keyboard\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="" />
+      <created>1651681199909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651681199909</updated>
+      <workItem from="1651681201538" duration="1313000" />
+      <workItem from="1651683716474" duration="11798000" />
+      <workItem from="1651739791271" duration="25609000" />
+      <workItem from="1651844047666" duration="8418000" />
+      <workItem from="1651935315297" duration="28864000" />
+    </task>
+    <task id="LOCAL-00001" summary="init: start task virtual-keyboard">
+      <created>1651681765084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651681765085</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add eslint and made structure of project">
+      <created>1651682597013</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651682597013</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: add function to move into textarea">
+      <created>1651704397255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651704397255</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add functional to button capsLock, Enter, Backspace, Delete on virtual keyword">
+      <created>1651745946477</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651745946477</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add functional to button LeftShift and RightShift">
+      <created>1651775351857</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651775351857</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add functional to change language">
+      <created>1651847899310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651847899310</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add all functional for task">
+      <created>1651951643019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651951643019</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: fix rules in eslint and fix error and warnings">
+      <created>1652017477829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652017477829</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init: start task virtual-keyboard" />
+    <MESSAGE value="feat: add eslint and made structure of project" />
+    <MESSAGE value="feat: add function to move into textarea" />
+    <MESSAGE value="feat: add functional to button capsLock, Enter, Backspace, Delete on virtual keyword" />
+    <MESSAGE value="feat: add functional to button LeftShift and RightShift" />
+    <MESSAGE value="feat: add functional to change language" />
+    <MESSAGE value="feat: add all functional for task" />
+    <MESSAGE value="fix: fix rules in eslint and fix error and warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix rules in eslint and fix error and warnings" />
+  </component>
+</project>
