@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="feat: add functional to change language">
+    <list default="true" id="dd2e79f1-cfde-4abd-ad4c-6741c624ef68" name="Changes" comment="feat: add all functional for task">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/realKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/realKeyboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/virtualKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/virtualKeyboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../igorbadyukov-JSFEPRESCHOOL/portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Pet-project/wildberris" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -61,7 +63,7 @@
       <workItem from="1651683716474" duration="11798000" />
       <workItem from="1651739791271" duration="25609000" />
       <workItem from="1651844047666" duration="8418000" />
-      <workItem from="1651935315297" duration="10487000" />
+      <workItem from="1651935315297" duration="25797000" />
     </task>
     <task id="LOCAL-00001" summary="init: start task virtual-keyboard">
       <created>1651681765084</created>
@@ -105,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651847899310</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: add all functional for task">
+      <created>1651951643019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651951643019</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +138,7 @@
     <MESSAGE value="feat: add functional to button capsLock, Enter, Backspace, Delete on virtual keyword" />
     <MESSAGE value="feat: add functional to button LeftShift and RightShift" />
     <MESSAGE value="feat: add functional to change language" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add functional to change language" />
+    <MESSAGE value="feat: add all functional for task" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add all functional for task" />
   </component>
 </project>
