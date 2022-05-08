@@ -170,7 +170,6 @@ const realKeyboard = () => {
               textArea.selectionEnd = curStart;
               break;
             }
-            break;
           case 'Backspace':
             textArea.focus();
             curStart = textArea.selectionStart;
@@ -186,7 +185,6 @@ const realKeyboard = () => {
               textArea.selectionEnd = curStart;
               break;
             }
-            break;
           case 'AltRight':
             textArea.focus();
             if (flagShift) {
